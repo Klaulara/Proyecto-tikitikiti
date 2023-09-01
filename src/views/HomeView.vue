@@ -3,42 +3,82 @@
     <h1>PROYECTO DIECIOCHERO</h1>
     <h2>Calcula la cuota para tu asado</h2>
 
-    <form class="container" @submit.prevent="onSubmit">
-      <div class="mb-3">
+    <form class="container mt-4" @submit.prevent="onSubmit">
+      <div class="mb-4 col-md-3 container text-start ">
         <label for="exampleFormControlInput1" class="form-label"
           >Cantidad de personas</label
         >
         <input
           type="number"
-          class="form-control"
+          class="form-control text-center mt-1"
           v-model="cantidadPersonas"
           id="exampleFormControlInput1"
-          placeholder="10"
+          placeholder="Ingresa el número de..."
+          min="0"
         />
       </div>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Cantidad de carne a consumir por persona</label
+      <div class="d-flex flex-row">
+    <div class="container col-4 d-flex justify-content-around">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"
+        >Corte de carne a elegir</label
+      >
+      <select
+        class="form-select"
+        aria-label="Default select example"
+        v-model="corteCarne"
+      >
+        <option aria-label="Disabled select example" disabled>Elige corte</option>
+        <option value="200">200 gramos</option>
+        <option value="300">300 gramos</option>
+        <option value="500">500 gramos</option>
+      </select>
+    </div>
+    
+    </div>
+    <div class="container col-4 d-flex justify-content-around">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"
+        >Cantidad de carne a consumir por persona</label
+      >
+      <select
+        class="form-select"
+        aria-label="Default select example"
+        v-model="cantidadCarne"
+      >
+        <option  aria-label="Disabled select example" disabled>Elige cantidad</option>
+        <option value="200">200 gramos</option>
+        <option value="300">300 gramos</option>
+        <option value="500">500 gramos</option>
+      </select>
+    </div>
+    
+    </div>
+    <div class="container col-4 d-flex justify-content-around">
+    <div class="mb-3 text-start">
+      <label for="exampleFormControlInput1" class="form-label"
+          >Precio por kilo</label
         >
-        <select class="form-select" aria-label="Default select example" v-model="cantidadCarne">
-          <option selected>Elije cantidad</option>
-          <option value="200">200 gramos</option>
-          <option value="300">300 gramos</option>
-          <option value="500">500 gramos</option>
-        </select>
-      </div>
+        <div class="input-group mb-3">
+  <span class="input-group-text">$</span>
+  <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" :placeholder="precioKilo"> 
+</div>
+    </div>
+    
+    </div>
+  </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"
           >Cantidad de pollo a consumir por persona</label
         >
         <select class="form-select" aria-label="Default select example" v-model="cantidadPollo">
-          <option selected>Elije cantidad</option>
+          <option selected aria-label="Disabled select example" disabled>Elige cantidad</option>
           <option value="200">200 gramos</option>
           <option value="300">300 gramos</option>
           <option value="500">500 gramos</option>
         </select>
       </div>
-      <input type="submit" value="Calcular" /> <button type="submit" @click="limpiarForm">Limpiar</button>
+      <button type="submit" class="btn btn-success me-1" value="Calcular" >Calcular</button>  <button type="submit" class="btn btn-warning text-light ms-1" @click="limpiarForm">Limpiar</button>
     </form>
 
     <div class="mt-5">
@@ -56,8 +96,11 @@ export default {
   data() {
     return {
       cantidadPersonas: null,
-      cantidadCarne: "Elije cantidad",
-      cantidadPollo: "Elije cantidad",
+      cantidadCarne: "Elige cantidad",
+      cantidadPollo: "Elige cantidad",
+      corteCarne: "Elige corte",
+      cortePollo: "Elige corte",
+      precioKilo: "Ingresa el precio",
       totalCarne: 0,
       totalPollo: 0,
       valorCuota: 0,
@@ -66,7 +109,7 @@ export default {
   components: {},
   methods: {
     onSubmit() {
-      if(this.cantidadCarne === "Elije cantidad" || this.cantidadPollo === "Elije cantidad" || this.cantidadPersonas === 0){
+      if(this.cantidadCarne === "Elige cantidad" || this.cantidadPollo === "Elige cantidad" || this.cantidadPersonas === 0){
         alert("Debes completar todos los campos");
       }
       this.totalCarne = (this.cantidadPersonas * this.cantidadCarne) / 1000;
@@ -82,3 +125,7 @@ export default {
   
 };
 </script>
+
+<style scoped>
+
+</style>

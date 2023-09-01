@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <!-- <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> -->
+    <!-- <router-link to="/">Home</router-link> | -->
+    <!-- <router-link to="/about">About</router-link> -->
   </nav>
   <router-view/>
 </template>
@@ -27,4 +27,12 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+body {
+  background-image: linear-gradient(-225deg, #2b4573 0%, #e6e6e6 60%, #ca041a 100%);}
 </style>
