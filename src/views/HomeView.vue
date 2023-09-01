@@ -37,7 +37,7 @@
           <option value="3">500 gramos</option>
         </select>
       </div>
-      <input type="submit" value="Calcular" />
+      <input type="submit" value="Calcular" /> <button type="submit" @click="limpiarForm">Limpiar</button>
     </form>
 
     <div class="mt-5">
@@ -51,5 +51,11 @@
 export default {
   name: "HomeView",
   components: {},
+  methods: {
+    limpiarForm(event){
+      event.preventDefault();
+      
+    }
+  },
 };
 </script>
