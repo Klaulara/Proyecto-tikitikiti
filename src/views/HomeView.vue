@@ -38,7 +38,7 @@
           <option value="500">500 gramos</option>
         </select>
       </div>
-      <input type="submit" value="Calcular" />
+      <input type="submit" value="Calcular" /> <button type="submit" @click="limpiarForm">Limpiar</button>
     </form>
 
     <div class="mt-5">
@@ -74,6 +74,11 @@ export default {
       const valorTotal = this.totalCarne * 9000 + this.totalPollo * 5000;
       this.valorCuota = valorTotal / this.cantidadPersonas;
     },
+    limpiarForm(event){
+      event.preventDefault();
+      
+    }
   },
+  
 };
 </script>
