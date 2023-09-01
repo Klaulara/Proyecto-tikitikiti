@@ -77,6 +77,16 @@ export default {
     limpiarForm(event){
       event.preventDefault();
       
+      let limpiar = confirm('Seguro deseas limpiar los campos?');
+      if(limpiar){
+        this.cantidadCarne = "Elije cantidad";
+        this.cantidadPollo = "Elije cantidad";
+        this.cantidadPersonas = null;
+        this.totalCarne = 0;
+        this.totalPollo = 0;
+        this.valorCuota = 0;
+      }
+      
     }
   },
   
