@@ -13,8 +13,8 @@
           class="form-control text-center mt-1"
           v-model="cantidadPersonas"
           id="exampleFormControlInput1"
-          placeholder="Ingresa el número de..."
-          min="0"
+          placeholder="Ingresa el número de invitados"
+          min="2"
         />
       </div>
       <div class="d-flex flex-row">
@@ -29,9 +29,9 @@
         v-model="corteCarne"
       >
         <option aria-label="Disabled select example" disabled>Elige corte</option>
-        <option value="200">200 gramos</option>
-        <option value="300">300 gramos</option>
-        <option value="500">500 gramos</option>
+        <option value="">Abastero</option>
+        <option value="">Lomo liso</option>
+        <option value="">Lomo vetado</option>
       </select>
     </div>
     
