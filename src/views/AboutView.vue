@@ -1,4 +1,4 @@
-<template>
+<!-- <template> -->
   <!-- <div class="d-flex flex-row">
     <div class="container col-3 d-flex justify-content-around">
     <div class="mb-3">
@@ -111,5 +111,4 @@
   <!-- <div class="about">
     <h1>This is an about page</h1>
   </div> -->
-  {}
-</template>
+<!-- </template> -->
