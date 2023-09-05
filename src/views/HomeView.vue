@@ -15,6 +15,7 @@
           id="exampleFormControlInput1"
           placeholder="Ingresa el número de invitados"
           min="2"
+          pattern="^[2-9][0-9]*$"
         />
       </div>
       <div class="d-flex flex-row text-start">

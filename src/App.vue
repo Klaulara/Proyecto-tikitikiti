@@ -34,9 +34,4 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
-body {
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  }
 </style>
