@@ -403,7 +403,7 @@ export default {
         this.cantidadCarne = "Elige cantidad";
         this.cantidadPollo = "Elige cantidad";
         this.corteCarne = "Elige corte";
-        this.cortePollo = "Elige presa"
+        this.cortePollo = "Elige presa";
         this.cantidadPersonas = null;
         this.totalCarne = 0;
         this.totalPollo = 0;
