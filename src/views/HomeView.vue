@@ -12,9 +12,9 @@
           type="number"
           class="form-control text-start mt-1"
           v-model="cantidadPersonas"
-          id="exampleFormControlInput1"
+          id="exampleFormControlInput1 personas"
           placeholder="Ingresa el número de invitados"
-          min="2"
+          @input="validate"
           pattern="^[1-9][0-9]*$"
         />
       </div>
@@ -406,6 +406,14 @@ export default {
         this.valorCuota = 0;
       }
     },
+
+    validate(){
+      let valor=parseInt(this.cantidadPersonas)
+      if(isNaN(valor) || valor < 2){
+        alert('El valor debe ser igual o mayor a 2')
+        this.cantidadPersonas=''
+      }
+    }
   },
 };
 </script>
