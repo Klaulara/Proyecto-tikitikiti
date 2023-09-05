@@ -15,7 +15,7 @@
           id="exampleFormControlInput1"
           placeholder="Ingresa el número de invitados"
           min="2"
-          pattern="^[2-9][0-9]*$"
+          pattern="^[1-9][0-9]*$"
         />
       </div>
       <div class="d-flex flex-row text-start">
@@ -32,9 +32,9 @@
               <option aria-label="Disabled select example" disabled>
                 {{ corteCarne }}
               </option>
-              <option value="">Abastero</option>
-              <option value="">Lomo liso</option>
-              <option value="">Lomo vetado</option>
+              <option value="Abastero">Abastero</option>
+              <option value="Lomo liso">Lomo liso</option>
+              <option value="Lomo vetado">Lomo vetado</option>
             </select>
           </div>
         </div>
@@ -88,9 +88,9 @@
               <option aria-label="Disabled select example" disabled>
                 {{ cortePollo }}
               </option>
-              <option value="">Alitas</option>
-              <option value="">Truto corto</option>
-              <option value="">Truto largo</option>
+              <option value="Alitas">Alitas</option>
+              <option value="Truto corto">Truto corto</option>
+              <option value="Truto largo">Truto largo</option>
             </select>
           </div>
         </div>
@@ -371,7 +371,7 @@ export default {
       cantidadCarne: "Elige cantidad",
       cantidadPollo: "Elige cantidad",
       corteCarne: "Elige corte",
-      cortePollo: "Elige corte",
+      cortePollo: "Elige presa",
       precioKilo: "Ingresa el precio",
       totalCarne: 0,
       totalPollo: 0,
