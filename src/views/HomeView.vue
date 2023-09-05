@@ -1,5 +1,5 @@
 <template>
-  <div class="home vh-100 pt-5">
+ <div class="home vh-100 pt-5">
     <h1>PROYECTO DIECIOCHERO</h1>
     <h2>Calcula la cuota para tu asado</h2>
 
@@ -346,17 +346,20 @@
                 </div>
               </div>
             </div>
-
-            <div class="mt-5">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5">
       <h3>Resultado</h3>
       <p v-if="valorCuota > 0">La cuota por persona es {{ valorCuota }}</p>
       <p>Carne: {{ totalCarne }} kilos</p>
       <p>Pollo: {{ totalPollo }} kilos</p>
     </div>
-          </form>
-        </div>
-      </div>
-    </div>    
+
+
+
+    
   </div>
 </template>
 
