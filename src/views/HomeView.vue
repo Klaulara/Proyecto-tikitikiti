@@ -68,7 +68,7 @@
                 type="number"
                 class="form-control"
                 aria-label="Amount (to the nearest dollar)"
-                :placeholder="precioKilo"
+                :placeholder="precioKiloCarne"
               />
             </div>
           </div>
@@ -124,7 +124,7 @@
                 type="number"
                 class="form-control"
                 aria-label="Amount (to the nearest dollar)"
-                :placeholder="precioKilo"
+                :placeholder="precioKiloPollo"
               />
             </div>
           </div>
@@ -232,7 +232,7 @@
                             type="number"
                             class="form-control"
                             aria-label="Amount (to the nearest dollar)"
-                            :placeholder="precioKilo"
+                            :placeholder="precioKiloCarne"
                           />
                         </div>
                       </div>
@@ -311,7 +311,7 @@
                             type="number"
                             class="form-control"
                             aria-label="Amount (to the nearest dollar)"
-                            :placeholder="precioKilo"
+                            :placeholder="precioKiloPollo"
                           />
                         </div>
                       </div>
@@ -374,7 +374,8 @@ export default {
       cantidadPollo: "Elige cantidad",
       corteCarne: "Elige corte",
       cortePollo: "Elige presa",
-      precioKilo: "Ingresa el precio",
+      precioKiloCarne: "Ingresa el precio",
+      precioKiloPollo: "Ingresa el precio",
       totalCarne: 0,
       totalPollo: 0,
       valorCuota: 0,
