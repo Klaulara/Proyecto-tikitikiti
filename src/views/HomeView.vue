@@ -355,11 +355,7 @@
       <p v-if="valorCuota > 0">La cuota por persona es {{ valorCuota }}</p>
       <p>Carne: {{ totalCarne }} kilos</p>
       <p>Pollo: {{ totalPollo }} kilos</p>
-    </div>
-
-
-
-    
+    </div>    
   </div>
 </template>
 
