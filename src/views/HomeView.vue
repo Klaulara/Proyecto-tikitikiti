@@ -1,5 +1,5 @@
 <template>
- <div class="home vh-100 pt-5">
+  <div class="home vh-100 pt-5">
     <h1>PROYECTO DIECIOCHERO</h1>
     <h2>Calcula la cuota para tu asado</h2>
 
@@ -30,7 +30,7 @@
               v-model="corteCarne"
             >
               <option aria-label="Disabled select example" disabled>
-                {{ corteCarne }}
+                Elige corte
               </option>
               <option value="Abastero">Abastero</option>
               <option value="Lomo liso">Lomo liso</option>
@@ -86,7 +86,7 @@
               v-model="cortePollo"
             >
               <option aria-label="Disabled select example" disabled>
-                {{ cortePollo }}
+                Elige presa
               </option>
               <option value="Alitas">Alitas</option>
               <option value="Truto corto">Truto corto</option>
@@ -159,6 +159,8 @@
                 id="exampleFormControlInput1"
                 placeholder="Ingresa el número de invitados"
                 min="2"
+                @input="validate"
+                pattern="^[1-9][0-9]*$"
               />
             </div>
             <div class="accordion-item">
@@ -356,7 +358,7 @@
       <p v-if="valorCuota > 0">La cuota por persona es {{ valorCuota }}</p>
       <p>Carne: {{ totalCarne }} kilos</p>
       <p>Pollo: {{ totalPollo }} kilos</p>
-    </div>    
+    </div>
   </div>
 </template>
 
@@ -398,8 +400,10 @@ export default {
 
       let limpiar = confirm("Seguro deseas limpiar los campos?");
       if (limpiar) {
-        this.cantidadCarne = "Elije cantidad";
-        this.cantidadPollo = "Elije cantidad";
+        this.cantidadCarne = "Elige cantidad";
+        this.cantidadPollo = "Elige cantidad";
+        this.corteCarne = "Elige corte";
+        this.cortePollo = "Elige presa"
         this.cantidadPersonas = null;
         this.totalCarne = 0;
         this.totalPollo = 0;
@@ -407,13 +411,13 @@ export default {
       }
     },
 
-    validate(){
-      let valor=parseInt(this.cantidadPersonas)
-      if(isNaN(valor) || valor < 2){
-        alert('El valor debe ser igual o mayor a 2')
-        this.cantidadPersonas=''
+    validate() {
+      let valor = parseInt(this.cantidadPersonas);
+      if (isNaN(valor) || valor < 2) {
+        alert("El valor debe ser igual o mayor a 2");
+        this.cantidadPersonas = "";
       }
-    }
+    },
   },
 };
 </script>
