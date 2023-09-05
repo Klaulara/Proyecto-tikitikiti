@@ -69,6 +69,7 @@
                 class="form-control"
                 aria-label="Amount (to the nearest dollar)"
                 :placeholder="precioKiloCarne"
+                v-model="precioKiloCarne"
               />
             </div>
           </div>
@@ -125,6 +126,7 @@
                 class="form-control"
                 aria-label="Amount (to the nearest dollar)"
                 :placeholder="precioKiloPollo"
+                v-model="precioKiloPollo"
               />
             </div>
           </div>
@@ -233,6 +235,7 @@
                             class="form-control"
                             aria-label="Amount (to the nearest dollar)"
                             :placeholder="precioKiloCarne"
+                            v-model="precioKiloCarne"
                           />
                         </div>
                       </div>
@@ -308,10 +311,11 @@
                         <div class="input-group mb-3">
                           <span class="input-group-text">$</span>
                           <input
-                            type="number"
+                            type="text"
                             class="form-control"
                             aria-label="Amount (to the nearest dollar)"
                             :placeholder="precioKiloPollo"
+                            v-model="precioKiloPollo"
                           />
                         </div>
                       </div>
