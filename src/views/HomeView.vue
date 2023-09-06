@@ -68,7 +68,7 @@
                 type="number"
                 class="form-control"
                 aria-label="Amount (to the nearest dollar)"
-                :placeholder="precioKiloCarne"
+                placeholder="Ingrese el precio"
                 v-model="precioKiloCarne"
               />
             </div>
@@ -125,7 +125,7 @@
                 type="number"
                 class="form-control"
                 aria-label="Amount (to the nearest dollar)"
-                :placeholder="precioKiloPollo"
+                placeholder="Ingrese el precio"
                 v-model="precioKiloPollo"
               />
             </div>
@@ -234,7 +234,7 @@
                             type="number"
                             class="form-control"
                             aria-label="Amount (to the nearest dollar)"
-                            :placeholder="precioKiloCarne"
+                            placeholder="Ingrese el precio"
                             v-model="precioKiloCarne"
                           />
                         </div>
@@ -314,7 +314,7 @@
                             type="text"
                             class="form-control"
                             aria-label="Amount (to the nearest dollar)"
-                            :placeholder="precioKiloPollo"
+                            placeholder="Ingrese el precio"
                             v-model="precioKiloPollo"
                           />
                         </div>
@@ -378,8 +378,8 @@ export default {
       cantidadPollo: "Elige cantidad",
       corteCarne: "Elige corte",
       cortePollo: "Elige presa",
-      precioKiloCarne: "Ingresa el precio",
-      precioKiloPollo: "Ingresa el precio",
+      precioKiloCarne:'',
+      precioKiloPollo: '',
       totalCarne: 0,
       totalPollo: 0,
       valorCuota: 0,
@@ -397,7 +397,7 @@ export default {
       }
       this.totalCarne = (this.cantidadPersonas * this.cantidadCarne) / 1000;
       this.totalPollo = (this.cantidadPersonas * this.cantidadPollo) / 1000;
-      const valorTotal = this.totalCarne * 9000 + this.totalPollo * 5000;
+      const valorTotal = this.totalCarne * parseInt(this.precioKiloCarne) + this.totalPollo * parseInt(this.precioKiloPollo);
       this.valorCuota = valorTotal / this.cantidadPersonas;
     },
     limpiarForm(event) {
