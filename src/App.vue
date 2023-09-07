@@ -1,7 +1,6 @@
 <template>
   <!-- <nav>
     <router-link to="/">Home</router-link> |
- <router-link to="/about">About</router-link>
   </nav> -->
   <router-view/>
 </template>
@@ -13,6 +12,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-image: linear-gradient(-225deg, #2b4573 0%, #e6e6e6 60%, #ca041a 100%);
 }
 
 nav {
@@ -33,6 +33,4 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
-body {
-  background-image: linear-gradient(-225deg, #2b4573 0%, #e6e6e6 60%, #ca041a 100%);}
 </style>
