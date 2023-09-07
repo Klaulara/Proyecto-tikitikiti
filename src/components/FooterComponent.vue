@@ -1,6 +1,6 @@
 <template>
     <div>
-      <footer class="footer fixed-bottom bg-danger">
+      <footer class="footer bg-danger">
         <div class="container">
           <h4>
             Todos los Derechos Reservados <i class="fa-regular fa-copyright"></i>
