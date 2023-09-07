@@ -88,9 +88,11 @@
       <p>Pollo: {{ totalPollo }} kilos</p>
     </div>
   </div>
+  <FooterComponent />
 </template>
 
 <script>
+import FooterComponent from "@/components/FooterComponent.vue"
 export default {
   name: "HomeView",
   data() {
@@ -106,7 +108,7 @@ export default {
       valorCuota: 0,
     };
   },
-  components: {},
+  components: {FooterComponent},
   methods: {
     onSubmit() {
       if(this.cantidadCarne === "Elige cantidad" || this.cantidadPollo === "Elige cantidad" || this.cantidadPersonas === 0){
