@@ -1,6 +1,6 @@
 <template>
-  <div class="home vh-100 pt-5">
-    <h1>PROYECTO DIECIOCHERO</h1>
+  <div class="home vh-100">
+    <h1 class="pt-2">PROYECTO DIECIOCHERO</h1>
     <h2>Calcula la cuota para tu asado</h2>
 
     <form class="container mt-4 d-none d-md-block" @submit.prevent="onSubmit">
@@ -428,4 +428,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>
