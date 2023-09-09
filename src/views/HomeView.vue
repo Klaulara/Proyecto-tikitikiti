@@ -1,5 +1,5 @@
 <template>
-  <div class="home vh-100">
+  <div class="home">
     <h1 class="pt-2">PROYECTO DIECIOCHERO</h1>
     <h2>Calcula la cuota para tu asado</h2>
 

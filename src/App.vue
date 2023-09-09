@@ -25,13 +25,16 @@
 </template>
 
 <style>
+body{
+  background-image: linear-gradient(122deg, #2b4573 0%, #e6e6e6 60%, #ca041a 100%);
+  background-size: 100% 150%;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-image: linear-gradient(-225deg, #2b4573 0%, #e6e6e6 60%, #ca041a 100%);
 }
 
 nav {
@@ -84,5 +87,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 .navbar-custom .navbar-nav .nav-link:hover {
   color: #002D62; 
+  cursor: context-menu;
   }
 </style>
