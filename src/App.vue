@@ -27,7 +27,7 @@
 <style>
 body{
   background-image: linear-gradient(122deg, #2b4573 0%, #e6e6e6 60%, #ca041a 100%);
-  background-size: 100% 150%;
+  background-size: 100% 200%;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
