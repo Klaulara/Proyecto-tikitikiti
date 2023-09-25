@@ -272,14 +272,16 @@ export default {
       if (
         this.cantidadCarne === "Elige cantidad" ||
         this.cantidadPollo === "Elige cantidad" ||
-        this.cantidadPersonas === null
+        this.cantidadPersonas === null ||
+        this.precioKiloCarne === '' ||
+        this.precioKiloPollo === ''
       ) {
         alert("Debes completar todos los campos");
       }
       this.totalCarne = (this.cantidadPersonas * this.cantidadCarne) / 1000;
       this.totalPollo = (this.cantidadPersonas * this.cantidadPollo) / 1000;
       const valorTotal = this.totalCarne * parseInt(this.precioKiloCarne) + this.totalPollo * parseInt(this.precioKiloPollo);
-      this.valorCuota = valorTotal / this.cantidadPersonas;
+      this.valorCuota = (valorTotal / this.cantidadPersonas).toFixed(0);
     },
     limpiarForm(event) {
       event.preventDefault();
